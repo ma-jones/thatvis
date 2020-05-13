@@ -1,0 +1,61 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: admin
+webhook_url: https://api.stackbit.com/project/5defb7296947a60019b43284/webhook/forestry
+sections:
+- type: document
+  path: _config.yml
+  label: Global Site Config
+  read_only: true
+  templates:
+  - config
+- type: document
+  path: _data/social.json
+  label: Social Links
+  read_only: true
+  templates:
+  - social
+- type: document
+  path: _data/author.json
+  label: Author
+  read_only: true
+  templates:
+  - author
+- type: document
+  path: blog/index.md
+  label: Blog
+  templates:
+  - blog
+- type: directory
+  path: ''
+  label: Page
+  create: all
+  match: "**/*.md"
+  exclude: "{_posts/**,README.md,LICENSE.md,blog/index.md}"
+  templates:
+  - page
+- type: jekyll-posts
+  label: Post
+  create: all
+  templates:
+  - post
+- type: document
+  path: _data/menus.yml
+  label: Site Menus
+  templates:
+  - site_menus
+upload_dir: images
+public_path: "/images"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_env:
+  - JEKYLL_ENV=staging
+  preview_output_directory: _site
+  install_dependencies_command: bundle install --path vendor/bundle
+  preview_docker_image: forestryio/ruby:2.6
+  mount_path: "/srv"
+  instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
+    --port 8080 --host 0.0.0.0 -d _site
