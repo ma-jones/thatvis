@@ -1588,20 +1588,6 @@ canvas{
   border-radius: 0 0 3px 3px;
 }
 
-
-/* ---- particles.js container ---- */
-
-#particles-js{
-
-  /*background-image: url('http://192.168.1.134/thatviz.local/wp-content/uploads/2019/09/recuitment.svg');*/
-  opacity: 0.65;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  /*max-height: 60vh;*/
-}
-
-
 /* ---- Bootstrap ---- */
 
 p {
@@ -1717,4 +1703,31 @@ div.job_listings .load_more_jobs:focus, div.job_listings .load_more_jobs:hover {
 .job_filters .search_jobs {
   
     color: #0c0c0c;
+}
+
+video {
+    width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+}
+
+.my-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #f9f9f9;
+    /*margin-top: 5%;*/
+}
+
+button {
+    color: black;
+    padding: 14px;
+    background-color: #fa2197;
+    border-radius: 25px;
 }
