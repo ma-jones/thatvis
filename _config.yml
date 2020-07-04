@@ -1,14 +1,19 @@
-# Site settings
-# title: Tech - ThatViz
+---
+title: Thatvis
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 email: hello@thatvis.com
 owner: ThatViz
 first_published: 2020
-description: > # this means to ignore newlines until "baseurl:"
-baseurl: "https://thatvis.netlify.com/" # the subpath of your site, e.g. /blog/
-url: "/" # the base hostname & protocol for your site
-
-twitter_username:
-github_username:
-
-# Build settings
+description: ''
+baseurl: https://thatvis.netlify.com/
+url: "/"
+twitter_username: 
+github_username: 
 markdown: kramdown
