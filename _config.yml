@@ -17,3 +17,5 @@ url: "/"
 twitter_username: 
 github_username: 
 markdown: kramdown
+
+theme: jekyll-theme-cayman
