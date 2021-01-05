@@ -145,7 +145,8 @@ ul, ol {
 /* --  background section  -- */
 
 .bg-1{
-	background-color: #222;
+    background-color: #222;
+    margin-top: -55px;
 }
 
 .bg-grey {
